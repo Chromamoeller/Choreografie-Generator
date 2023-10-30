@@ -9,6 +9,8 @@
     "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "quasar": "^2.0.0",
     "vue": "^3.2.13",
     "vuex": "^4.0.0"
   },
@@ -21,7 +23,8 @@
     "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-jest": "^27.0.6",
     "cypress": "^9.7.0",
-    "jest": "^27.0.5"
+    "jest": "^27.0.5",
+    "vue-cli-plugin-quasar": "~5.0.2"
   },
   "browserslist": [
     "> 1%",
