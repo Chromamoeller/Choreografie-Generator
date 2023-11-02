@@ -12,7 +12,8 @@
     "@quasar/extras": "^1.0.0",
     "quasar": "^2.0.0",
     "vue": "^3.2.13",
-    "vuex": "^4.0.0"
+    "vuex": "^4.0.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@vue/cli-plugin-e2e-cypress": "~5.0.0",
