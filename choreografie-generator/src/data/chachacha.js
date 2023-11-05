@@ -4,9 +4,9 @@ import { LateinFigure } from "./lateinFigure";
 
 
 
-closedBasic = new LateinFigure("Geschlossener Grundschritt", "D", "LF", "LF", false, false)
-openBasic = new LateinFigure("Offener Grundschritt", "D", "LF", "LF", false, false)
-fan = new LateinFigure("Fan", "D", "LF", "LF", false, false)
+let closedBasic = new LateinFigure("Geschlossener Grundschritt", "D", "LF", "LF", false, false)
+let openBasic = new LateinFigure("Offener Grundschritt", "D", "LF", "LF", false, false)
+let fan = new LateinFigure("Fan", "D", "LF", "LF", false, false)
 
 
 export let chachacha = new Dance("Chachacha", "30", "Latein", [
