@@ -1,7 +1,7 @@
 import { Dance } from "./dance";
-import { Figure } from "./figure";
+import { StandardFigure } from "./standardFigure";
 
 
-export let slowFoxtot = new Dance("Slow Fox", "30", "Standard", [
+export let slowFoxtot = new StandardDance("Slow Fox", "30", "Standard", [
 
 ])

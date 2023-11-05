@@ -1,5 +1,5 @@
 import { Dance } from "./dance";
-import { Figure } from "./figure";
+import { LateinFigure } from "./lateinFigure";
 
 export let samba = new Dance("Samba", "50", "Latein", [
 

@@ -1,5 +1,5 @@
 import { Dance } from "./dance";
-import { Figure } from "./figure";
+import { StandardFigure } from "./standardFigure";
 
 export let quickstep = new Dance("Quickstep", "50", "Standard", [
 

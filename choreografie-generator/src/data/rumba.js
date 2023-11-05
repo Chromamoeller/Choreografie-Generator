@@ -1,5 +1,5 @@
 import { Dance } from "./dance";
-import { Figure } from "./figure";
+import { LateinFigure } from "./lateinFigure";
 
 
 
