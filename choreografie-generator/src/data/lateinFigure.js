@@ -1,22 +1,19 @@
-
-export class Figure {
+export class LateinFigure {
     name;
     level;
     startingFoot;
     freeFootAfterFinish;
     startsInPP;
     endsInPP;
-    startsInAlignment;
-    endsInAlignment;
 
-    constructor(name, level, startingFoot, freeFootAfterFinish, startsInPP, endsInPP, startsInAlignment, endsInAlignment) {
+
+    constructor(name, level, startingFoot, freeFootAfterFinish, startsInPP, endsInPP) {
         this.name = name;
         this.level = level;
         this.startingFoot = startingFoot;
         this.freeFootAfterFinish = freeFootAfterFinish;
         this.startsInPP = startsInPP;
         this.endsInPP = endsInPP;
-        this.startsInAlignment = startsInAlignment;
-        this.endsInAlignment = endsInAlignment;
+
     }
 }
