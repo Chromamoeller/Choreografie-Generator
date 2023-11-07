@@ -4,10 +4,17 @@
       <h2>{{ title }}</h2>
     </div>
     <div class="myContent">
-      <q-input style="font-size: 2.5rem; margin-top: 3rem;" placeholder="Bitte Eine Zahl eingeben" type="Number"
-        v-model="eingegebeneZahl"></q-input>
-      <q-btn style="margin-top: 2rem; min-width: 8vw; min-height: 6vh;"
-        @click="$store.commit('setAmount', eingegebeneZahl)">Summit</q-btn>
+      <q-input
+        style="font-size: 2.5rem; margin-top: 3rem"
+        placeholder="Bitte Eine Zahl eingeben"
+        type="Number"
+        v-model="eingegebeneZahl"
+      ></q-input>
+      <q-btn
+        style="margin-top: 2rem; min-width: 8vw; min-height: 6vh"
+        @click="$store.commit('getData', eingegebeneZahl)"
+        >Summit</q-btn
+      >
     </div>
   </div>
 </template>
@@ -17,8 +24,8 @@ export default {
   name: "LeftSideAmount",
   data() {
     return {
-      eingegebeneZahl: null
-    }
+      eingegebeneZahl: null,
+    };
   },
   props: {
     title: String,

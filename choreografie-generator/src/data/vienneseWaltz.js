@@ -69,7 +69,7 @@ let FourToSixReverseTurn = new StandardFigure(
   FACING_DW
 );
 
-export let slowWalz = new Dance("Langsamer Walzer", "30", "Standard", [
+export let vienneseWalz = new Dance("Wiener Walzer", "60", "Standard", [
   RFclosedChange,
   LFclosedChange,
   OneToTreeNaturalTurn,
