@@ -9,6 +9,8 @@ import { samba } from "@/data/samba";
 import { jive } from "@/data/jive";
 import { quickstep } from "@/data/quickstep";
 import { pasoDoble } from "@/data/pasoDoble";
+import * as utilitys from "@/utilitys/functionTests";
+import { Dance } from "@/data/dance";
 
 export default createStore({
   state: {
@@ -36,18 +38,17 @@ export default createStore({
   },
   getters: {},
   mutations: {
-    setStyle(state, value) {
-      state.userState.choosenStyle = value;
+    updateStyle(state, value) {
+      utilitys.updateStyleJS(state.userState, value);
     },
-    setAmount(state, value) {
-      state.userState.choosenAmount = value;
-      console.log(state.userState);
+    updateAmount(state, value) {
+      utilitys.updateAmountJS(state.userState, value);
     },
-    setDance(state, value) {
-      state.userState.choosenDance = value;
+    updateDance(state, value) {
+      utilitys.updateDanceJS(state.userState, value);
     },
-    setLevel(state, value) {
-      state.userState.chossenLevel = value;
+    updateLevel(state, value) {
+      utilitys.updateLevelJS(state.userState, value);
     },
 
     createChoreo(state, value) {
@@ -55,23 +56,10 @@ export default createStore({
       var counter = state.userState.choosenAmount;
       if (state.userState.choosenStyle == "Standard") {
         // das alles funktioniert nur für Standard  da es hier um Alignment geht  Bei latein gibt es das nicht
-        var figurenListe;
-        switch (state.userState.choosenDance) {
-          case "Langsamer Walzer":
-            figurenListe = state.standard.slowWalz.figures;
-            break;
-          case "Wiener Walzer":
-            figurenListe = state.standard.vienneseWalz.figures;
-            break;
-          case "Tango":
-            figurenListe = state.standard.tango.figures;
-            break;
-          case "Slow Fox":
-            figurenListe = state.standard.slowFoxtot.figures;
-            break;
-          case "Quickstep":
-            figurenListe = state.standard.quickstep.figures;
-        }
+        var figurenListe = utilitys.setFigureList(
+          state.userState,
+          state.standard
+        );
 
         state.userState.choreoList = [figurenListe[0]];
 

@@ -7,14 +7,14 @@
       <q-separator inset />
       <q-card-section class="myCardMain">
         <q-btn
-          @click="$store.commit('setStyle', 'Standard')"
+          @click="$store.commit('updateStyle', 'Standard')"
           class="myBTN"
           style="background-color: rgba(17, 70, 117, 0.799)"
           flat
           >Standard</q-btn
         >
         <q-btn
-          @click="$store.commit('setStyle', 'Latein')"
+          @click="$store.commit('updateStyle', 'Latein')"
           class="myBTN"
           style="background-color: rgba(176, 23, 59, 0.799); margin-top: -10vh"
           flat

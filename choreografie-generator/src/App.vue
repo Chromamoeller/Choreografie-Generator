@@ -55,9 +55,7 @@
         caption="Fertige Liste"
         :done="step > 5"
       >
-        For each ad campaign that you create, you can control how much you're
-        willing to spend on clicks and conversions, which networks and
-        geographical locations you want your ads to show on, and more.
+        <ChoreoList />
       </q-step>
       <template #navigation>
         <q-stepper-navigation class="row">
@@ -86,6 +84,7 @@ import ChooseStyle from "./components/ChooseStyle.vue";
 import ChooseDance from "./components/ChooseDance.vue";
 import ChooseLevel from "./components/ChooseLevel.vue";
 import ChooseAmount from "./components/ChooseAmount.vue";
+import ChoreoList from "./components/ChoreoList.vue";
 
 export default {
   name: "App",
@@ -94,7 +93,13 @@ export default {
       step: ref(1),
     };
   },
-  components: { ChooseStyle, ChooseDance, ChooseLevel, ChooseAmount },
+  components: {
+    ChooseStyle,
+    ChooseDance,
+    ChooseLevel,
+    ChooseAmount,
+    ChoreoList,
+  },
 };
 </script>
 
