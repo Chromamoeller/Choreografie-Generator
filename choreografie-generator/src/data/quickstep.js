@@ -14,8 +14,8 @@ let quaterTurnToRight = new StandardFigure(
   "D",
   RF,
   RF,
-  false,
-  false,
+  "false",
+  "false",
   FACING_DW,
   BACKING_DC
 );
@@ -24,8 +24,8 @@ let progressiveChasse = new StandardFigure(
   "D",
   RF,
   RF,
-  false,
-  false,
+  "false",
+  "false",
   BACKING_DC,
   FACING_DW
 );

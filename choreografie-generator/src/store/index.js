@@ -49,11 +49,13 @@ export default createStore({
     setLevel(state, value) {
       state.userState.chossenLevel = value;
     },
-    getData(state, value) {
+
+    createChoreo(state, value) {
       state.userState.choosenAmount = value;
+      var counter = state.userState.choosenAmount;
       if (state.userState.choosenStyle == "Standard") {
         // das alles funktioniert nur für Standard  da es hier um Alignment geht  Bei latein gibt es das nicht
-        let figurenListe;
+        var figurenListe;
         switch (state.userState.choosenDance) {
           case "Langsamer Walzer":
             figurenListe = state.standard.slowWalz.figures;
@@ -71,30 +73,30 @@ export default createStore({
             figurenListe = state.standard.quickstep.figures;
         }
 
-        let counter = state.userState.choosenAmount;
-        state.userState.choreoList = [figurenListe[0]]; // erste Figur immer in der liste um einen vergleichswert zu haben
+        state.userState.choreoList = [figurenListe[0]];
 
-        // die schleife geht so lange wieder beutzer will das die Liste lang ist
         while (state.userState.choreoList.length <= counter - 1) {
-          let randomNr = Math.floor(Math.random() * figurenListe.length);
+          var lastFigure =
+            state.userState.choreoList[state.userState.choreoList.length - 1];
+          // Filter nach startenden Fuß abhängig vom freien Fuß nach letzter figur aus der liste
+          let newList = figurenListe.filter((freeFoot) =>
+            freeFoot.startingFoot.includes(lastFigure.freeFootAfterFinish)
+          );
+          // sollte eig eine liste an figuren erstellen in der die Promenaden positionen überinstimmen
+          newList = newList.filter((promenade) =>
+            promenade.startsInPP.includes(lastFigure.endsInPP)
+          );
+          // Filtert die neue liste nach passt die Raumrichtung der letzen figr mit einer der aus der liste übrigen figurn?
+          newList = newList.filter((roomAlignment) =>
+            roomAlignment.startsInAlignment.includes(lastFigure.endsInAlignment)
+          );
+          let randomNr = Math.floor(Math.random() * newList.length);
 
-          if (
-            //es wird überprüft ob der Fuß der frei ist, mit dem Fuß übereinstimmt der gebraucht wird für die Figur
-            // wenn ja wird diese Figur der liste hinzugefügt
-            figurenListe[randomNr].startingFoot ===
-              state.userState.choreoList[state.userState.choreoList.length - 1]
-                .freeFootAfterFinish &&
-            figurenListe[randomNr].startsInPP ==
-              state.userState.choreoList[state.userState.choreoList.length - 1]
-                .endsInPP &&
-            figurenListe[randomNr].startsInAlignment ===
-              state.userState.choreoList[state.userState.choreoList.length - 1]
-                .endsInAlignment
-          ) {
-            state.userState.choreoList.push(figurenListe[randomNr]);
-          }
+          state.userState.choreoList.push(newList[randomNr]);
         }
         console.log(state.userState.choreoList);
+      } else if (state.userState.choosenStyle == "Latein") {
+        console.log("Latein hat noch keine ");
       }
     },
   },

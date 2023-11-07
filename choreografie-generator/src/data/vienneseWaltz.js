@@ -13,8 +13,8 @@ let RFclosedChange = new StandardFigure(
   "D",
   RF,
   LF,
-  false,
-  false,
+  "false",
+  "false",
   FACING_DC,
   FACING_DC
 );
@@ -23,8 +23,8 @@ let LFclosedChange = new StandardFigure(
   "D",
   LF,
   RF,
-  false,
-  false,
+  "false",
+  "false",
   FACING_DW,
   FACING_DW
 );
@@ -33,8 +33,8 @@ let OneToTreeNaturalTurn = new StandardFigure(
   "D",
   RF,
   LF,
-  false,
-  false,
+  "false",
+  "false",
   FACING_DW,
   BACKING_LOD
 );
@@ -43,8 +43,8 @@ let FourToSixNaturalTurn = new StandardFigure(
   "D",
   LF,
   RF,
-  false,
-  false,
+  "false",
+  "false",
   BACKING_LOD,
   FACING_DC
 );
@@ -53,8 +53,8 @@ let OneToTheeReverseTurn = new StandardFigure(
   "D",
   LF,
   RF,
-  false,
-  false,
+  "false",
+  "false",
   FACING_DC,
   BACKING_LOD
 );
@@ -63,8 +63,8 @@ let FourToSixReverseTurn = new StandardFigure(
   "D",
   RF,
   LF,
-  false,
-  false,
+  "false",
+  "false",
   BACKING_LOD,
   FACING_DW
 );

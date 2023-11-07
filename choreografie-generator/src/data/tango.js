@@ -13,8 +13,8 @@ let walkingStepLF = new StandardFigure(
   "D",
   LF,
   RF,
-  false,
-  false,
+  "false",
+  "false",
   FACING_DW,
   FACING_DW
 );
@@ -23,8 +23,8 @@ let walkingStepRF = new StandardFigure(
   "D",
   RF,
   LF,
-  false,
-  false,
+  "false",
+  "false",
   FACING_DW,
   FACING_DW
 );

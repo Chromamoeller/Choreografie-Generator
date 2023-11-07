@@ -12,7 +12,7 @@
       ></q-input>
       <q-btn
         style="margin-top: 2rem; min-width: 8vw; min-height: 6vh"
-        @click="$store.commit('getData', eingegebeneZahl)"
+        @click="$store.commit('createChoreo', eingegebeneZahl)"
         >Summit</q-btn
       >
     </div>

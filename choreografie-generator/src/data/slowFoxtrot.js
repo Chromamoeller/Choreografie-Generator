@@ -13,8 +13,8 @@ let featherStep = new StandardFigure(
   "D",
   RF,
   LF,
-  false,
-  false,
+  "false",
+  "false",
   FACING_DC,
   FACING_DC
 );
@@ -23,8 +23,8 @@ let threeStep = new StandardFigure(
   "D",
   LF,
   RF,
-  false,
-  false,
+  "false",
+  "false",
   FACING_DW,
   FACING_DW
 );
